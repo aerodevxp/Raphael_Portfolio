@@ -179,7 +179,7 @@ async function createProjectDiv(projectIndexString){
     pageDiv.style.color = projectData[projectIndexString]["txtcolor"]
     const bioText = document.createElement('p')
     bioText.classList.add("project-page-bio-text")
-    bioText.textContent = projectData[projectIndexString]["bio"]
+    bioText.innerHTML = projectData[projectIndexString]["bio"]
 
     //Quit button
     const pageExit = document.createElement("div")
@@ -228,25 +228,34 @@ async function createProjectDiv(projectIndexString){
     projectImage.src = "./img/prj" + projectIndexString + ".png"
     projectImage.classList.add("project-page-img")
     pageDiv.appendChild(projectImage)
+
+    pageDiv.appendChild(bioText)
     
     //youtube iframe
-    const projectYoutube = document.createElement("iframe")
-    projectYoutube.classList.add("project-page-youtube")
-    projectYoutube.src=projectData[projectIndexString]["youtube"]
-    projectYoutube.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    projectYoutube.allowFullscreen = true
-    var projectYoutubeWidth= window.screen.availWidth*0.3
-    var projectYoutubeHeight = window.screen.availWidth*0.1
-    if (window.screen.availWidth > 1000){
-        projectYoutubeHeight = projectYoutubeHeight * 1.5
+    console.log("aaa")
+    console.log(projectData[projectIndexString]["youtube"])
+    console.log()
+    if (!(projectData[projectIndexString]["youtube"] === "")){
+        const projectYoutube = document.createElement("iframe")
+        projectYoutube.classList.add("project-page-youtube")
+        projectYoutube.src=projectData[projectIndexString]["youtube"]
+        projectYoutube.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        projectYoutube.allowFullscreen = true
+        var projectYoutubeWidth= window.screen.availWidth*0.3
+        var projectYoutubeHeight = window.screen.availWidth*0.1
+        if (window.screen.availWidth > 1000){
+            projectYoutubeHeight = projectYoutubeHeight * 1.5
+        }
+        console.log(projectYoutubeWidth)
+        console.log(projectYoutubeHeight)
+        projectYoutube.width=projectYoutubeWidth.toString()
+        projectYoutube.height=projectYoutubeHeight.toString()
+        pageDiv.appendChild(projectYoutube)
     }
-    console.log(projectYoutubeWidth)
-    console.log(projectYoutubeHeight)
-    projectYoutube.width=projectYoutubeWidth.toString()
-    projectYoutube.height=projectYoutubeHeight.toString()
+
     //adding bio after and stuff in order
-    pageDiv.appendChild(bioText)
-    pageDiv.appendChild(projectYoutube)
+    
+    
     pageDiv.appendChild(pageExit)
 
     adaptProjectBioText()
