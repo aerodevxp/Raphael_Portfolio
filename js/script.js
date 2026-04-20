@@ -57,9 +57,9 @@ window.mobileCheck = function() {
   };
 
   window.addEventListener('load', function () {
-    if (window.mobileCheck()){
-        alert("This website is not yet fully optimized for mobile phones. It is recommended you use a larger device to see this page.")
-    }
+    //if (window.mobileCheck()){
+        //alert("This website is not yet fully optimized for mobile phones. It is recommended you use a larger device to see this page.")
+    //}
     init_projects()
   })
 
