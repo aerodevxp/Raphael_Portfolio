@@ -25,6 +25,11 @@
     --transition: 0.3s;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 @keyframes hide_scrollup {
     from {
         opacity: 1;
@@ -187,7 +192,7 @@ nav a {
 nav a::before {
     content: '★';
     position: absolute;
-    left: -5px;
+    left: -5rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--gold);
@@ -199,11 +204,12 @@ nav a:hover {
     color: var(--gold);
     background: rgba(255, 215, 0, 0.1);
     border-radius: 20px;
+    
 }
 
 nav a:hover::before {
     opacity: 1;
-    left: 5px;
+    left: -0.3rem;
 }
 
 nav ul {
@@ -262,6 +268,7 @@ nav ul li {
     width: 30%;
     padding: 1rem;
     opacity: 100%;
+    z-index: 20;
 }
 
 .bio {
@@ -821,7 +828,8 @@ footer a:hover {
     padding: 0.7rem;
     text-align: center;
     cursor: pointer;
-    left: 4rem;
+    left: 40%;
+    top: 4%;
     background: var(--knuckles-red);
     color: white;
     border-radius: 10px;
@@ -1037,7 +1045,7 @@ footer a:hover {
         position: fixed;
         background: var(--sonic-dark);
         flex-direction: column;
-        top: 70px;
+        top: 5.9rem;
         left: 0%;
         width: 100%;
         text-align: center;
