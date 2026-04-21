@@ -4,7 +4,7 @@
         {
             "name":"DEV-ARCADE",
             "date":"2025",
-            "projectType":"solo",
+            "projectType":"Solo",
             "languages":"Lots of bash and a tiny bit of Python",
             "description":"My very own all-purpose server, with a fully integrated gaming mode for couch use.",
             "bio":"In 2025, I've purchased an Ayaneo AM02 Mini PC to build a setup I've been dreaming about for a while: My very own game console that also acts as a server. Thanks to Valve, Steam can be used as a game console UI. A gamescope user session allows for a seamless boot into gaming. In the background, I've also added many services I use on daily, like a custom DNS, a VPN (two in fact), cloud storage, etc... Read more about it on the Medium article I wrote <a href='https://medium.com/@raphalbeauregard/my-dev-arcade-my-home-made-steam-machine-server-285995e99155'>here!</a> I've obtained a lot of hands-on experience with Linux server architecture, PKIs, systemctl, and several industry standard tools used on most servers around the globe.<br><br><br><br><img src=img/am02.webp style='width:100%; left:30%; box-shadow: -10px -10px 50px red, 10px 10px 50px red;'>",
@@ -17,7 +17,7 @@
         {
             "name":"yOS (YuriOS)",
             "date":"2020-2022",
-            "projectType":"solo",
+            "projectType":"Solo",
             "languages":"Python & JS",
             "description":"A Multi-account Social Automation Manager for all major social platforms!",
             "bio": "Unlike what you might assume from the 'amazing' name I gave this program, this is not an operating system. This is actually an all-purpose automation bot as well as being an account manager. This was great if you wanted to control your multiple accounts of different services from one unified place. This bot started being active on a few Discord servers and extended to support SMS through TextNow, Email, and Telegram. From the Discord App, you could simply message this bot with a command and it would process it to other services. I made this for myself as an end to constantly logging in and out to just send one message through an alternative account in every app. As of right now, I am remaking the entire software to have a public API under another name meaning I am not working on this version anymore, but the original bot is still functionning since 2020 for some influencers that have requested it. However, I am planning on not updating this anymore by 2024.",

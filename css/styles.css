@@ -79,13 +79,16 @@ html, body {
 @keyframes ring-spin {
     0% {
         transform: rotate(-10deg);
+        animation-timing-function: ease-in;
     }
     25% {
         transform: rotate(0deg);
+        animation-timing-function: ease-out;
     }
 
     50% {
         transform: rotate(10deg);
+        
     }
     75% {
         transform: rotate(0deg);
@@ -94,6 +97,7 @@ html, body {
 
     100% {
         transform: rotate(-10deg);
+        animation-timing-function: ease-out;
     }
 
 }
