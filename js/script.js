@@ -282,3 +282,18 @@ window.onresize = function(){
         adaptProjectBioText()
     }
 }
+
+//skills stuff
+
+function fitText(element) {
+    const container = element.parentElement;
+    let fontSize = parseInt(window.getComputedStyle(element).fontSize);
+    
+    // Shrink until it fits
+    while (element.scrollHeight > container.clientHeight && fontSize > 10) {
+        fontSize--;
+        element.style.fontSize = fontSize + 'px';
+    }
+}
+
+document.querySelectorAll('.skill-icon-text').forEach(fitText);

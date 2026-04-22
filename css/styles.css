@@ -391,7 +391,7 @@ nav ul li {
 }
 
 .skill-header {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     color: var(--secondary-color);
     font-weight: var(--bolder-font);
     font-size: 2rem;
@@ -405,11 +405,33 @@ nav ul li {
     gap: 2rem;
 }
 
+
+.skill-icon-text {
+    display: flex;
+    padding-bottom: 0.1rem;
+    box-shadow:
+        0 0 0 5px var(--gold),
+        0 0 0 10px var(--sonic-blue),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10%;
+    background: var(--secondary-color);
+    transition: var(--transition);
+    animation: float 4s ease-in-out infinite;
+    color: var(--gold);
+    -webkit-text-stroke: 3px black;
+    paint-order: stroke fill;
+    font-size: 3vmin;
+    padding: 2vmin;
+    width: 30vmin;
+    justify-content: center;
+}
+
 .first-set,
 .second-set {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 6rem;
+
     flex-wrap: wrap;
 }
 
@@ -1382,4 +1404,62 @@ footer a:hover {
         transform: translateZ(500px) rotate(360deg) scale(2);
         opacity: 0;
     }
+}
+
+
+.github_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%);
+}
+
+.calendar a,
+.calendar .contrib-column {
+    display: none !important;
+}
+
+.calendar_parent {
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.calendar {
+    background-color: #004499 !important;
+    width: 50% !important;
+    direction: rtl;
+}
+
+.calendar_title {
+    padding-bottom: 2rem;
+    text-align: center;
+    color: var(--secondary-color);
+    -webkit-text-stroke: 0.5rem black;
+    paint-order: stroke fill;
+}
+
+.contact-root-div {
+    width: 100%;
+}
+
+.github_div::after,
+.github_div::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(45deg,
+            var(--sonic-blue),
+            var(--sonic-blue) 20px,
+            var(--gold) 20px,
+            var(--gold) 40px,
+            var(--knuckles-red) 40px,
+            var(--knuckles-red) 60px);
 }
