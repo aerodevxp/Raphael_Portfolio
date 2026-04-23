@@ -112,6 +112,7 @@ async function init_projects(){
         projectCard.classList.add("project-container")
         projectCard.classList.add("project-card")
         projectsContainer.appendChild(projectCard)
+        projectCard.style.backgroundColor = projectData[projectIndex]["color"]
 
         //Adding prj image
         const prjImg = document.createElement("img")
@@ -180,7 +181,15 @@ async function createProjectDiv(projectIndexString){
     const bioText = document.createElement('p')
     bioText.classList.add("project-page-bio-text")
     bioText.innerHTML = projectData[projectIndexString]["bio"]
-
+    fetch('txt_assets/prjs/' + projectIndexString + '.txt')
+        .then((res) => res.text())
+        .then((text) => {
+            bioText.innerHTML = text;
+        })
+        .catch((e) => {
+            console.error(e);
+            bioText.innerHTML = "Something went wrong! Sorry about that."
+        })
     //Quit button
     const pageExit = document.createElement("div")
     const pageExitTxt = document.createElement("p")
