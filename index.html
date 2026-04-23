@@ -186,9 +186,11 @@ Hey there, I'm Raph! I'm a graduate currently specialized in <b>cybersecurity, n
         <!-- Gtihub Widget -->
         <section class="github_sec">
             <div class="github_div">
-                
-                <img style="padding-top: 3rem; width: 80vmin;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aerodevxp&layout=compact&hide_border=false" alt="Top Languages">
-                <div class="calendar_parent">
+                <div class="github_div2">
+                    <img style="padding-top: 3rem; width: 70vmin;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aerodevxp&layout=compact&hide_border=false" alt="Top Languages">
+                    
+                </div>
+                    <div class="calendar_parent">
                      <!--<div class="calendar" style="padding: 3rem; width: fit-content;">-->
                         <!-- Calendar appears here -->
                     <!--</div>-->
@@ -211,13 +213,22 @@ Hey there, I'm Raph! I'm a graduate currently specialized in <b>cybersecurity, n
                 }, 1000); // Delay to let it render
             </script>
         </section>
+        <section class="showcase hide-on-mobile">
+            <div class = "hide-on-mobile" style="width: 100%;padding: 1rem; height: 70%;">
+                        <h2 style="padding:2rem;">Write-Up of the day</h2>
+                        <embed src="x" id="showcase_pdf" width="100%" height="700vh" style="padding-bottom: 5rem;" "application/pdf">
+                    </div>
+        </section>
         
         <!-- Contact section -->
         
-
+        <span class ="line"></span>
             <section class="contact" id="contact">
+                
                 <div class="contact-root-div">
-                    <div class="contact-form-container">
+                    
+                        <div class="contact-form-container">
+                        
                         <h2>Any Questions? Ask away!</h2>
                         <div class="contact-form">
                             <form action="https://formspree.io/f/xzbqekan" method="POST">
@@ -313,16 +324,6 @@ Hey there, I'm Raph! I'm a graduate currently specialized in <b>cybersecurity, n
         <script
         src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
         ></script>
-
-        <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-        <link
-        rel="stylesheet"
-        href="css/github_calendar.css"
-        />
-
-        <script>
-            GitHubCalendar(".calendar", "LovesickDev", { responsive: true, tooltips: false });
-        </script>
         <!--Ion Icons scripts-->
         <script
             type="module"

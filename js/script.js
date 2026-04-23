@@ -306,3 +306,11 @@ function fitText(element) {
 }
 
 document.querySelectorAll('.skill-icon-text').forEach(fitText);
+
+//choose random showcase pdf on load
+const pdfFiles = [
+    'splunk_labs_env_setup.pdf'
+];
+
+const randomPdf = pdfFiles[Math.floor(Math.random() * pdfFiles.length)];
+document.getElementById('showcase_pdf').src = `pdf_assets/${randomPdf}`;

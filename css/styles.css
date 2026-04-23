@@ -312,6 +312,31 @@ nav ul li {
     text-shadow: 3px 3px 0 var(--knuckles-red);
 }
 
+.showcase h2 {
+    color: var(--gold);
+    font-weight: var(--bolder-font);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 3px 3px 0 var(--knuckles-red);
+}
+
+.showcase {
+    height: auto;
+    overflow-y: auto;
+    background-color: #fff;
+    background-image:
+        linear-gradient(transparent 31px, #e0e0e0 31px, #e0e0e0 32px, transparent 32px),
+        linear-gradient(#f5d5d5 1px, transparent 1px);
+    background-size: 100% 32px, 100% 32px;
+    background-position: 0 0, 66px 0;
+    border-left: 2px solid #e0a0a0;
+    padding-left: 70px;
+    padding: 2rem;
+}
+
 .bio p {
     line-height: var(--line-height);
     padding: 0.3rem 0;
@@ -934,6 +959,12 @@ footer a:hover {
     }
 }
 
+@media (max-width: 767px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
 @keyframes prj-page-slidein-mobile {
     0% {
         top: 125%;
@@ -1418,6 +1449,12 @@ footer a:hover {
         linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%);
 }
 
+.github_div2 {
+    display: relative;
+    justify-content: center;
+    align-items: center;
+}
+
 .calendar a,
 .calendar .contrib-column {
     display: none !important;
@@ -1443,11 +1480,30 @@ footer a:hover {
 }
 
 .contact-root-div {
+    display: flex;
+    flex-direction: row;
     width: 100%;
 }
 
 .github_div::after,
 .github_div::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(45deg,
+            var(--sonic-blue),
+            var(--sonic-blue) 20px,
+            var(--gold) 20px,
+            var(--gold) 40px,
+            var(--knuckles-red) 40px,
+            var(--knuckles-red) 60px);
+}
+
+.line::before {
     content: '';
     display: block;
     position: relative;
