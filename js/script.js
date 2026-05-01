@@ -309,7 +309,8 @@ document.querySelectorAll('.skill-icon-text').forEach(fitText);
 
 //choose random showcase pdf on load
 const pdfFiles = [
-    'splunk_labs_env_setup.pdf'
+    'splunk_labs_env_setup.pdf',
+    'secure_gateway_and_IPS.pdf'
 ];
 
 const randomPdf = pdfFiles[Math.floor(Math.random() * pdfFiles.length)];
